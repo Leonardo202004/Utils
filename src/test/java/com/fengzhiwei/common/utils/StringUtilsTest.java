@@ -3,8 +3,6 @@ package com.fengzhiwei.common.utils;
 import org.junit.Test;
 
 
-
-
 public class StringUtilsTest {
 
 	@Test

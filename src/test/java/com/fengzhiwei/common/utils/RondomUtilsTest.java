@@ -1,7 +1,5 @@
 package com.fengzhiwei.common.utils;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class RondomUtilsTest {
