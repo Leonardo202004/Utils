@@ -2,6 +2,8 @@ package com.fengzhiwei.common.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringUtils {
 
@@ -70,5 +72,19 @@ public class StringUtils {
 			// 定义规则 num2222@126.com
 			String reg = "\\w+\\@\\w+\\.\\w+";
 			return src.matches(reg);
+		}
+		/*
+		* 方法功能：根据正则在字符串提取一段值，用于后面在url地址里提取ID值。
+		* 例如在“http://news.cnstock.com/news,yw-201908-4413224.htm”把“4413224”提取出来。
+		* 
+		* regex = [0-9]+(?=[^0-9]*$)
+		*/
+		public static String getPlaceholderValue(String src, String regex){
+			  Pattern p = Pattern.compile(regex);//编译规则
+			  Matcher matcher = p.matcher(src);//Pattern 匹配src
+			  if(matcher.find()) {//如果找到
+				return  matcher.group();//返回匹配到的字符串
+			  }
+			return null;
 		}
 }
