@@ -6,13 +6,13 @@ public class RondomUtilsTest {
 
 	@Test
 	public void testRandom() {
-		int i = RondomUtils.random(1, 3);
+		int i = RandomUtils.random(1, 3);
 		System.out.println(i);
 	}
 
 	@Test
 	public void testSubRandom() {
-		int[] subRandom = RondomUtils.subRandom(1, 10, 3);
+		int[] subRandom = RandomUtils.subRandom(1, 10, 3);
 		for (int i : subRandom) {
 			System.out.println(i);
 		}
@@ -20,13 +20,13 @@ public class RondomUtilsTest {
 
 	@Test
 	public void testRandomCharacter() {
-		char c = RondomUtils.randomCharacter();
+		char c = RandomUtils.randomCharacter();
 		System.out.println(c);
 	}
 
 	@Test
 	public void testRandomString() {
-		String randomString = RondomUtils.randomString(4);
+		String randomString = RandomUtils.randomString(4);
 		System.out.println(randomString);
 	}
 

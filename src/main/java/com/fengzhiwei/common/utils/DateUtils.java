@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class DateUtils {
 	/**
-	 * 
 	 * @Title: random 
 	 * @Description: 随机日期
 	 * @param min
