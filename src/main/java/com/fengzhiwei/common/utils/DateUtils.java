@@ -5,6 +5,21 @@ import java.util.Date;
 
 public class DateUtils {
 	/**
+	 * 
+	 * @Title: SubDate 
+	 * @Description: TODO
+	 * @param date
+	 * @param hours
+	 * @return
+	 * @return: Date  返回date 减去指定小时的时间
+	 */
+	public static  Date SubDate(Date date,int hours) {
+		Calendar c = Calendar.getInstance();
+		c.setTime(date);//用传入的日期再次初始化日历类
+		c.add(Calendar.HOUR_OF_DAY, -hours);//减去指定的小时
+		return c.getTime();
+	}
+	/**
 	 * @Title: random 
 	 * @Description: 随机日期
 	 * @param min
